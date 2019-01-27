@@ -112,6 +112,38 @@ public class Item {
 			return new Item(this);
 		}
 	}
+
+	public String getItemId() {
+		return itemId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public double getRating() {
+		return rating;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public Set<String> getCategories() {
+		return categories;
+	}
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public double getDistance() {
+		return distance;
+	}
 	
 	//Use ItemBuilder to fill in the attributes
 	//then call ItemBuilder.build() to create the object we want
