@@ -15,5 +15,7 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="/Users/yingjianwu/Desktop/java-json.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Desktop/jar_files/commons-pool2-2.4.2.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Desktop/jar_files/jedis-2.8.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

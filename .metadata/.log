@@ -188,3 +188,6 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY org.eclipse.jface.text 2 0 2019-08-02 10:36:49.616
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.wst.server.core 4 0 2019-08-02 14:46:27.214
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.

@@ -228,21 +228,7 @@ public class MySQLConnection implements DBConnection {
 	@Override
 	public String getFullname(String userId) {
 		// TODO Auto-generated method stub
-		String firstName = "";
-		String lastName = "";
-		try {
-			String sql = "Select first_name last_name from users WHERE user_ID = ?";
-			PreparedStatement stmt = conn.prepareStatement(sql);
-			stmt.setString(1,userId);
-			ResultSet rs = stmt.executeQuery();
-			while (rs.next()) {
-				firstName = rs.getString(1);
-				lastName = rs.getString(2);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return firstName + " " + lastName;
+		return null;
 	}
 
 	@Override
@@ -259,7 +245,7 @@ public class MySQLConnection implements DBConnection {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return passwordFromDB.equals(password);
+		return passwordFromDB == password;
 	}
 	
 	@Override
