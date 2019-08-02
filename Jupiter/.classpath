@@ -17,5 +17,30 @@
 	<classpathentry kind="lib" path="/Users/yingjianwu/Desktop/java-json.jar"/>
 	<classpathentry kind="lib" path="/Users/yingjianwu/Desktop/jar_files/commons-pool2-2.4.2.jar"/>
 	<classpathentry kind="lib" path="/Users/yingjianwu/Desktop/jar_files/jedis-2.8.1.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/byte-buddy-1.9.10.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/cache-api-1.0.0.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/fst-2.57.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/jackson-annotations-2.9.0.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/jackson-core-2.9.9.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/jackson-databind-2.9.9.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/jackson-dataformat-yaml-2.9.9.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/javassist-3.21.0-GA.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/jodd-bean-5.0.10.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/jodd-core-5.0.10.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/netty-buffer-4.1.36.Final.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/netty-codec-4.1.36.Final.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/netty-codec-dns-4.1.36.Final.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/netty-common-4.1.36.Final.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/netty-handler-4.1.36.Final.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/netty-resolver-4.1.36.Final.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/netty-resolver-dns-4.1.36.Final.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/netty-transport-4.1.36.Final.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/objenesis-2.5.1.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/reactive-streams-1.0.2.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/reactor-core-3.2.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/redisson-3.11.1.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/rxjava-2.2.7.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="/Users/yingjianwu/Downloads/jar_files (1)/snakeyaml-1.23.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

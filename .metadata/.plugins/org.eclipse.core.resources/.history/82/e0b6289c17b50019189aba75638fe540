@@ -1,0 +1,61 @@
+package cache;
+
+import java.util.List;
+import java.util.Set;
+
+import org.redisson.Redisson;
+import org.redisson.config.Config;
+
+import entity.ByteObjectItemUtil;
+import entity.Item;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
+import redis.clients.jedis.JedisPoolConfig;
+
+public class SingleRedisPool implements RedisConnection{
+	private static Redisson redison;
+	
+	public static JedisPool getJedisPool() {
+		if (redison == null) {
+			// TODO: May need to tune Parameters later.
+			Config config = new Config();
+			config.useSingleServer().setAddress("localhost:6379");
+			config.useSingleServer().setConnectionPoolSize(100);
+			redison = Reddison.create(config);
+		}
+		return jedisPool;
+	}
+
+	@Override
+	public void invalLikedCache(String userId) {
+		// TODO Auto-generated method stub
+		Jedis jedis = null;
+		try {
+			jedis = jedisPool.getResource();
+			jedis.del(userId);
+		} finally {
+			if (jedis != null) {
+				jedis.close();
+			}
+		}
+	}
+
+	@Override
+	public void setFavoriteItems(String userId,List<Item> items) {
+		Jedis jedis = null;
+		// TODO Auto-generated method stub
+		for (Item item : items) {
+			jedis = jedisPool.getResource();
+		}
+	}
+
+	@Override
+	public Set<Item> getFavoriteItems(String userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+
+}
