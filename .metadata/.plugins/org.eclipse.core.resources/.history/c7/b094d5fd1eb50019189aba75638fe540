@@ -12,9 +12,6 @@ import javax.servlet.http.HttpSession;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import cache.CacheConnectionFactory;
-import cache.RedisConnection;
-import cache.SingleRedisPool;
 import db.DBConnection;
 import db.DBConnectionFactory;
 
@@ -55,11 +52,7 @@ public class Login extends HttpServlet{
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("Login");
-		SingleRedisPool redisConn = (SingleRedisPool)CacheConnectionFactory.getConnection();
-		redisConn.mockInsert();
-		redisConn.mockQuery();
-		System.out.println("Login");
+		System.out.println("Post");
 		DBConnection connection = DBConnectionFactory.getConnection();
 		try {
 			JSONObject input = RpcHelper.readJSONObject(request);

@@ -21,7 +21,7 @@ public class SingleRedisPool implements RedisConnection{
 		if (redisson == null) {
 			// TODO: May need to tune Parameters later.
 			Config config = new Config();
-			config.useSingleServer().setAddress("redis://localhost:6379");
+			config.useSingleServer().setAddress("localhost:6379");
 			config.useSingleServer().setConnectionPoolSize(100);
 			redisson = Redisson.create(config);
 		}

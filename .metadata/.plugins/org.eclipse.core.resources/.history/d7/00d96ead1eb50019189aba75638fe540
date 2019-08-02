@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Set;
 
 import org.redisson.Redisson;
-import org.redisson.api.RBucket;
 import org.redisson.api.RList;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
@@ -21,7 +20,7 @@ public class SingleRedisPool implements RedisConnection{
 		if (redisson == null) {
 			// TODO: May need to tune Parameters later.
 			Config config = new Config();
-			config.useSingleServer().setAddress("redis://localhost:6379");
+			config.useSingleServer().setAddress("localhost:6379");
 			config.useSingleServer().setConnectionPoolSize(100);
 			redisson = Redisson.create(config);
 		}
@@ -51,16 +50,6 @@ public class SingleRedisPool implements RedisConnection{
 			returnSet.add(item);
 		}
 		return returnSet;
-	}
-	
-	public void mockInsert() {
-		RBucket<String> keyObject = redisson.getBucket("abc");
-		keyObject.set("value");
-	}
-	
-	public void mockQuery() {
-		RBucket<String> keyObject = redisson.getBucket("abc");
-		System.out.println(keyObject.get());
 	}
 	
 	

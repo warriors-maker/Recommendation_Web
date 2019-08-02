@@ -55,11 +55,10 @@ public class Login extends HttpServlet{
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("Login");
 		SingleRedisPool redisConn = (SingleRedisPool)CacheConnectionFactory.getConnection();
 		redisConn.mockInsert();
 		redisConn.mockQuery();
-		System.out.println("Login");
+		
 		DBConnection connection = DBConnectionFactory.getConnection();
 		try {
 			JSONObject input = RpcHelper.readJSONObject(request);
