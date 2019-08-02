@@ -1,0 +1,15 @@
+package cache;
+
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
+
+public class RedisConnection {
+	private static JedisPool pool = null;
+	
+	public RedisConnection() {
+		pool = new JedisPool()
+	}
+	
+	
+	
+}

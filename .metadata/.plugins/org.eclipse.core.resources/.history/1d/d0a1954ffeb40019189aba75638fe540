@@ -1,0 +1,26 @@
+package cache;
+
+import java.util.List;
+
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
+
+public class RedisConnection {
+	
+	/**
+	 * Insert the favorite items for a user.
+	 * 
+	 * @param userId
+	 * @param itemIds
+	 */
+	public void setFavoriteItems(String userId, List<String> itemIds);
+
+	/**
+	 * Delete the favorite items for a user.
+	 * 
+	 * @param userId
+	 * @param itemIds
+	 */
+	public void unsetFavoriteItems(String userId, List<String> itemIds);
+	
+}

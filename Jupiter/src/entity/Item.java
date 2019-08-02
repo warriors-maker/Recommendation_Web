@@ -1,12 +1,15 @@
 package entity;
 
+import java.io.ByteArrayOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.Set;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class Item {
+public class Item implements Serializable{
 	private String itemId;
 	private String name;
 	private double rating;
@@ -144,6 +147,7 @@ public class Item {
 	public double getDistance() {
 		return distance;
 	}
+	
 	
 	//Use ItemBuilder to fill in the attributes
 	//then call ItemBuilder.build() to create the object we want
