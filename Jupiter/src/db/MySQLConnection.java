@@ -236,5 +236,41 @@ public class MySQLConnection implements DBConnection {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
+	
+	@Override
+	public boolean verifyRegister(String userId) {
+		int count = 0;
+		try {
+			String sql = "Select count(*) from users WHERE user_ID = ?";
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			stmt.setString(1, userId);
+			ResultSet rs = stmt.executeQuery();
+			while (rs.next()) {
+				count = rs.getInt(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		if (count == 0) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+	
+	@Override
+	public void registerUser(String userId, String password, String firstName, String lastName) {
+		try {
+			String sql = "INSERT IGNORE INTO users Values(?,?,?,?)";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, userId);
+			ps.setString(2, password);
+			ps.setString(3, firstName);
+			ps.setString(4, lastName);
+			ps.execute();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

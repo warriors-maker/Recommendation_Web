@@ -188,7 +188,7 @@
         var result = JSON.parse(res);
 
         // successfully logged in
-        if (result.status === 'OK') {
+        if (result.result === 'Success') {
           onSessionValid(result);
         }
       },
@@ -243,9 +243,9 @@
       // successful callback
       function(res) {
         var result = JSON.parse(res);
-
+        
         // successfully logged in
-        if (result.status === 'OK') {
+        if (result.status === 'OK' || result.result === 'SUCCESS') {
         	showRegisterResult('Succesfully registered');
         } else {
         	showRegisterResult('User already existed');
