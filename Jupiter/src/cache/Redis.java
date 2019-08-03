@@ -5,7 +5,7 @@ import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
 public class Redis {
-private JedisPool jedisPool = null;
+protected JedisPool jedisPool = null;
 	
 	public Redis() {
 		try {

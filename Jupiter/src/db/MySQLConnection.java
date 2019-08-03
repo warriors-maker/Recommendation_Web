@@ -237,7 +237,6 @@ public class MySQLConnection implements DBConnection {
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
 				firstName = rs.getString(1);
-				lastName = rs.getString(2);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
