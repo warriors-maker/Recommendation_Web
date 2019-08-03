@@ -1,0 +1,6 @@
+package cache;
+
+public class RedisUtil {
+	public static final String HOSTNAME = "localhost";
+	public static final String PORT = "6379";
+}

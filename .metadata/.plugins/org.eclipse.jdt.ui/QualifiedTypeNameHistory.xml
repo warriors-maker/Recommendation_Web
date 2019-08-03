@@ -7,7 +7,6 @@
     <fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
     <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
     <fullyQualifiedTypeName name="com.sun.tools.javac.util.List"/>
-    <fullyQualifiedTypeName name="org.json.JSONException"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="entity.Item"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
@@ -25,6 +24,26 @@
     <fullyQualifiedTypeName name="rpc.RpcHelper"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
-    <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="entity.Item.ItemBuilder"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="org.json.JSONException"/>
+    <fullyQualifiedTypeName name="cache.RedisUtil"/>
+    <fullyQualifiedTypeName name="redis.clients.jedis.JedisPool"/>
+    <fullyQualifiedTypeName name="redis.clients.jedis.JedisPoolConfig"/>
+    <fullyQualifiedTypeName name="redis.clients.jedis.Jedis"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.ByteArrayInputStream"/>
+    <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
+    <fullyQualifiedTypeName name="entity.ByteObjectItemUtil"/>
+    <fullyQualifiedTypeName name="org.redisson.config.Config"/>
+    <fullyQualifiedTypeName name="org.redisson.api.RedissonClient"/>
+    <fullyQualifiedTypeName name="org.redisson.api.RList"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="org.redisson.api.RBucket"/>
+    <fullyQualifiedTypeName name="cache.RedisConnection"/>
+    <fullyQualifiedTypeName name="cache.CacheConnectionFactory"/>
+    <fullyQualifiedTypeName name="cache.SingleRedisPool"/>
 </qualifiedTypeNameHistroy>

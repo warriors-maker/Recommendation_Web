@@ -3,6 +3,7 @@ package rpc;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,8 +14,11 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import cache.CacheConnection;
+import cache.CacheConnectionFactory;
 import db.DBConnection;
 import db.DBConnectionFactory;
+import entity.Item;
 
 /**
  * Servlet implementation class ItemHistory
@@ -38,7 +42,26 @@ public class ItemHistory extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		CacheConnection cache = CacheConnectionFactory.getConnection();
+		DBConnection connection = DBConnectionFactory.getConnection();
+		
+		try {
+			JSONObject input = RpcHelper.readJSONObject(request);
+			String userId = input.getString("user_id");
+			Set<Item> items = cache.getFavoriteCache(userId);
+			if (items.size() == 0) {
+				items = connection.getFavoriteItems(userId);
+			}
+			JSONArray array = new JSONArray();
+			for (Item item : items) {
+				array.put(item.toJSONObject());
+			}
+			RpcHelper.writeJSONArray(response, array);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			connection.close();
+		}
 	}
 
 	/**
@@ -47,11 +70,15 @@ public class ItemHistory extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		// TODO Auto-generated method stub
+		CacheConnection cache = CacheConnectionFactory.getConnection();
 		DBConnection connection = DBConnectionFactory.getConnection();
 		try {
 			JSONObject input = RpcHelper.readJSONObject(request);
 			String userId = input.getString("user_id");
+			//Invalid Cache
+			cache.invalidFavoriteCache(userId);
 			JSONArray array = input.getJSONArray("favorite");
 			List<String> itemIds = new ArrayList<>();
 			for (int i = 0; i < array.length(); ++i) {

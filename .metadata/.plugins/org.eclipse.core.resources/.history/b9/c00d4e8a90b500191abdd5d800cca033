@@ -1,0 +1,36 @@
+package cache;
+
+import java.util.Set;
+
+import entity.Item;
+import redis.clients.jedis.JedisPool;
+import redis.clients.jedis.JedisPoolConfig;
+
+public class SingleRedisConnection extends Redis implements CacheConnection{
+	
+	private JedisPool jedisPool = null;
+	
+	public SingleRedisConnection() {
+		super()
+	}
+	
+	@Override
+	public void invalidFavoriteCache(String userId) {
+		// TODO Auto-generated method stub
+		
+		
+	}
+
+	@Override
+	public void setFavoriteCache(String userId, Set<Item> items) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Set<Item> getFavoriteCache(String userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

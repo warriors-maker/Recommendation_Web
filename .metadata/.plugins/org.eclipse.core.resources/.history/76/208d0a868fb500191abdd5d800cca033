@@ -1,0 +1,27 @@
+package cache;
+
+import java.util.Set;
+
+import entity.Item;
+
+public class SingleRedisConnection implements CacheConnection {
+
+	@Override
+	public void invalidFavoriteCache(String userId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setFavoriteCache(String userId, Set<Item> items) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Set<Item> getFavoriteCache(String userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
