@@ -231,7 +231,7 @@
     password = md5(username + md5(password));
 
     // The request parameters
-    var url = './register';
+    var url = '/Jupiter/register';
     var req = JSON.stringify({
       user_id : username,
       password : password,

@@ -6,6 +6,7 @@
 		<item value="Apache Tomcat v9.0"/>
 	</list>
 	<list key="J2EE_EXPORT_JST_WEB">
+		<item value="/Users/yingjianwu/Desktop/Jupiter.war"/>
 		<item value="/Users/yingjianwu/Documents/Jupiter.war"/>
 	</list>
 </section>

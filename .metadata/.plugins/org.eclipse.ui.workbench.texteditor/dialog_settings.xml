@@ -2,27 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Login" key="selection"/>
+		<item value="register" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="register"/>
+			<item value="ajax"/>
+			<item value="Fail "/>
+			<item value="Fail to"/>
+			<item value="Fail"/>
+			<item value="&quot;Fail to"/>
+			<item value="&quot;Fail"/>
+			<item value="errorcall"/>
+			<item value="errorcakk"/>
+			<item value="error"/>
 			<item value="login"/>
 			<item value="logiin"/>
 			<item value="md5"/>
 			<item value="./history"/>
 			<item value="Invalid"/>
-			<item value="showLoginError"/>
-			<item value="invalid"/>
-			<item value="./login"/>
-			<item value="loadNearbyItems"/>
-			<item value="initGeoLocation"/>
-			<item value="Retrieving"/>
-			<item value="onSession"/>
-			<item value="/register"/>
-			<item value="/login"/>
-			<item value="/recommendation"/>
 		</list>
 		<list key="replacehistory">
 		</list>
