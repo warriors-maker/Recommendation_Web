@@ -13,6 +13,8 @@ services:
    MYSQL_ROOT_PASSWORD: 'root'
   volumes: 
    - my-db:/var/lib/mysql
+  ports:
+   - "3306:3306"
  web-app:
   build: .
   ports:

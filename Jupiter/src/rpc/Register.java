@@ -48,6 +48,7 @@ public class Register extends HttpServlet {
 		// TODO Auto-generated method stub
 		DBConnection connection = DBConnectionFactory.getConnection();
 		try {
+			System.out.println("I am here");
 			JSONObject input = RpcHelper.readJSONObject(request);
 			String userId = input.getString("user_id");
 			String password = input.getString("password");
@@ -60,6 +61,7 @@ public class Register extends HttpServlet {
 				connection.registerUser(userId, password, firstName, lastName);
 				RpcHelper.writeJSONObject(response, new JSONObject().put("status", "OK"));
 			} else {
+				System.out.println("Fail");
 				RpcHelper.writeJSONObject(response, new JSONObject().put("status", "Failure"));
 			}
 			
