@@ -103,8 +103,11 @@ public class ItemHistory extends HttpServlet {
 		// TODO Auto-generated method stub
 		DBConnection connection = DBConnectionFactory.getConnection();
 		try {
+			CacheConnection cache = CacheConnectionFactory.getConnection();
 			JSONObject input = RpcHelper.readJSONObject(request);
 			String userId = input.getString("user_id");
+			//Invalid Cache
+			cache.invalidFavoriteCache(userId);
 			JSONArray array = input.getJSONArray("favorite");
 			List<String> itemIds = new ArrayList<>();
 			for (int i = 0; i < array.length(); ++i) {

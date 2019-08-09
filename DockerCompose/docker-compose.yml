@@ -1,0 +1,25 @@
+version: '3'
+services:
+ redis:
+  image: 'redis:latest'
+  volumes: my-redis:/data
+ mysql:
+  image: 'mysql:latest'
+  restart: always
+  environment:
+   MYSQL_DATABASE: 'db'
+   MYSQL_USER: 'root'
+   MYSQL_PASSWORD: 'root'
+   MYSQL_ROOT_PASSWORD: 'root'
+   volumes:
+    -my-db: /var/lib/mysql
+ web-app:
+  build: .
+  ports:
+   - "8080:8080"
+  links:
+   - redis
+   - mysql
+ volumes:
+  - my-db:
+  - my-redis:
